@@ -1,3 +1,4 @@
+# Create Streamlit config
 mkdir -p ~/.streamlit/
 
 echo "\
@@ -8,8 +9,5 @@ headless = true\n\
 \n\
 " > ~/.streamlit/config.toml
 
-echo "\
-[python]\n\
-version = \"3.11\"\n\
-\n\
-" >> ~/.streamlit/config.toml
+# Install required system-level libraries
+apt-get update && apt-get install -y zlib1g-dev libjpeg-dev libfreetype6-dev
